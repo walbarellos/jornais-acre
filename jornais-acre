@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+set -u
+
+JORNAIS=(
+    # ─────────────────────────────────────────────
+    # PRINCIPAIS PORTAIS DO ACRE
+    # ─────────────────────────────────────────────
+
+    "https://contilnetnoticias.com.br/"
+    "https://ac24horas.com/"
+    "https://agazetadoacre.com/"
+    "https://www.noticiasdahora.com.br/"
+    "https://folhadoacre.com.br/"
+    "https://oaltoacre.com/"
+    "https://atribuna.com.br/"
+
+    # ─────────────────────────────────────────────
+    # GOVERNO / NOTÍCIAS INSTITUCIONAIS
+    # ─────────────────────────────────────────────
+
+    "https://agencia.ac.gov.br/"
+    "https://www.aleac.ac.gov.br/"
+    "https://www.riobranco.ac.leg.br/"
+    "https://www.riobranco.ac.gov.br/"
+
+    # ─────────────────────────────────────────────
+    # TELEVISÃO / RÁDIO / MÍDIA LOCAL
+    # ─────────────────────────────────────────────
+
+    "https://g1.globo.com/ac/acre/"
+    "https://globoplay.globo.com/"
+    "https://www.acreaovivo.com/"
+    "https://www.radiouniversitaria.com.br/"
+
+    # ─────────────────────────────────────────────
+    # POLÍCIA / SEGURANÇA / JUSTIÇA
+    # ─────────────────────────────────────────────
+
+    "https://www.pc.ac.gov.br/"
+    "https://pm.ac.gov.br/"
+    "https://www.mpac.mp.br/"
+    "https://www.tjac.jus.br/"
+    "https://www.prf.gov.br/"
+    "https://www.gov.br/pf/pt-br"
+
+    # ─────────────────────────────────────────────
+    # BRASIL / REGIONAL
+    # ─────────────────────────────────────────────
+
+    "https://www.gov.br/acessoainformacao/"
+)
+
+echo "╔══════════════════════════════════════════╗"
+echo "║       📰 PAINEL DE NOTÍCIAS DO ACRE     ║"
+echo "╚══════════════════════════════════════════╝"
+echo
+echo "Abrindo ${#JORNAIS[@]} páginas no Firefox..."
+echo
+
+firefox --new-window "${JORNAIS[@]}" >/dev/null 2>&1 &
+
+echo "✓ Todas as páginas foram enviadas ao Firefox."
